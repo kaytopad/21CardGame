@@ -20,7 +20,7 @@ bool Turn::PlayPlayerTurn(Player* player, CardManager* cardManager)
 			return true;
 		}
 
-		cout << "\nã‚«ãƒ¼ãƒ‰ã‚’å¼•ãã¾ã™ã‹ï¼Ÿï¼Ÿ\n";
+		cout << "\nƒJ[ƒh‚ğˆø‚«‚Ü‚·‚©HH\n";
 		cout << INPUT_YES << ":Yes\n";
 		cout << INPUT_NO << ":No\n";
 
@@ -28,22 +28,22 @@ bool Turn::PlayPlayerTurn(Player* player, CardManager* cardManager)
 
 		cin >> input;
 
-		//ã‚«ãƒ¼ãƒ‰å¼•ã‹ãªã„
+		//ƒJ[ƒhˆø‚©‚È‚¢
 		if (input == INPUT_NO)
 		{
-			cout << "\nã‚«ãƒ¼ãƒ‰ã‚’å¼•ãã¾ã›ã‚“\n";
+			cout << "\nƒJ[ƒh‚ğˆø‚«‚Ü‚¹‚ñ\n";
 			return true;
 		}
 
 		if (input == INPUT_YES)
 		{
-			//ã‚«ãƒ¼ãƒ‰ã‚’å–å¾—
+			//ƒJ[ƒh‚ğæ“¾
 			int card = cardManager->DrawCard();
 
-			cout << "\nPlayerãŒã‚«ãƒ¼ãƒ‰ã‚’å¼•ãã¾ã—ãŸ\n";
-			cout << "å¼•ã„ãŸã‚«ãƒ¼ãƒ‰:" << card << endl;
+			cout << "\nPlayer‚ªƒJ[ƒh‚ğˆø‚«‚Ü‚µ‚½\n";
+			cout << "ˆø‚¢‚½ƒJ[ƒh:" << card << endl;
 
-			//Playerã«å¼•ã„ãŸã‚«ãƒ¼ãƒ‰ã‚’è¿½åŠ 
+			//Player‚Éˆø‚¢‚½ƒJ[ƒh‚ğ’Ç‰Á
 			player->AddCard(card);
 
 			player->ShowStatus();
@@ -51,7 +51,7 @@ bool Turn::PlayPlayerTurn(Player* player, CardManager* cardManager)
 
 		if (player->GetTotal() >= BURST_SCORE)
 		{
-			cout << "\nPlayerã¯ãƒãƒ¼ã‚¹ãƒˆã—ã¾ã—ãŸ\n";
+			cout << "\nPlayer‚Íƒo[ƒXƒg‚µ‚Ü‚µ‚½\n";
 			return false;
 		}
 
@@ -79,32 +79,32 @@ void Turn::PlayCpuTurn(Player* player, CPU* cpu, CardManager* cardManager)
 
 		if (cpu->GetTotal() >= BURST_SCORE)
 		{
-			cout << "\nCPUã¯ãƒãƒ¼ã‚¹ãƒˆã—ã¾ã—ãŸ\n";
+			cout << "\nCPU‚Íƒo[ƒXƒg‚µ‚Ü‚µ‚½\n";
 			break;
 		}
 
 
 		if (cpu->GetTotal() <= CPU_DRAW_LIMIT)
 		{
-			cout << "\nCPUã¯15ä»¥ä¸‹ãªã®ã§ã‚«ãƒ¼ãƒ‰ã‚’å¼•ãã¾ã™ã€‚\n";
+			cout << "\nCPU‚Í15ˆÈ‰º‚È‚Ì‚ÅƒJ[ƒh‚ğˆø‚«‚Ü‚·B\n";
 		}
 		else if (cpu->GetTotal() < player->GetTotal())
 		{
-			cout << "CPUã¯Playerã‚ˆã‚Šå°ã•ã„ã®ã§ã‚«ãƒ¼ãƒ‰ã‚’å¼•ãã¾ã™ã€‚\n";
+			cout << "CPU‚ÍPlayer‚æ‚è¬‚³‚¢‚Ì‚ÅƒJ[ƒh‚ğˆø‚«‚Ü‚·B\n";
 		}
 		else
 		{
-			cout << "CPUã¯Playerä»¥ä¸Šã«ãªã‚Šã¾ã—ãŸã€‚\n";
-			cout << "CPUã¯ã‚«ãƒ¼ãƒ‰ã‚’å¼•ãã¾ã›ã‚“ã€‚\n";
+			cout << "CPU‚ÍPlayerˆÈã‚É‚È‚è‚Ü‚µ‚½B\n";
+			cout << "CPU‚ÍƒJ[ƒh‚ğˆø‚«‚Ü‚¹‚ñB\n";
 
 			break;
 		}
 
-		//ã‚«ãƒ¼ãƒ‰ã‚’å–å¾—
+		//ƒJ[ƒh‚ğæ“¾
 		int card = cardManager->DrawCard();
-		cout << "\nCPUãŒã‚«ãƒ¼ãƒ‰ã‚’å¼•ãã¾ã—ãŸ\n";
-		cout << "å¼•ã„ãŸã‚«ãƒ¼ãƒ‰:" << card << endl;
-		//CPUã«å¼•ã„ãŸã‚«ãƒ¼ãƒ‰ã‚’è¿½åŠ 
+		cout << "\nCPU‚ªƒJ[ƒh‚ğˆø‚«‚Ü‚µ‚½\n";
+		cout << "ˆø‚¢‚½ƒJ[ƒh:" << card << endl;
+		//CPU‚Éˆø‚¢‚½ƒJ[ƒh‚ğ’Ç‰Á
 		cpu->AddCard(card);
 		cpu->ShowStatus();
 	}

@@ -2,13 +2,13 @@
 #include<ctime>
 #include "Game.h"
 
-int main()
+int main(void)
 {
-	// ä¹±æ•°ã®åˆæœŸåŒ–
+	// —”‚Ì‰Šú‰»
 	srand(static_cast<unsigned int>(time(nullptr)));
-	// ã‚²ãƒ¼ãƒ ã®åˆæœŸåŒ–
+	// ƒQ[ƒ€‚Ì‰Šú‰»
 	Game game;
-	// ã‚²ãƒ¼ãƒ ã®é–‹å§‹
+	// ƒQ[ƒ€‚ÌŠJn
 	game.Start();
 	return 0;
 }

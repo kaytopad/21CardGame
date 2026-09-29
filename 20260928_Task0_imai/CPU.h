@@ -1,17 +1,10 @@
 #pragma once
-class CPU
+#include "CardUser.h"
+class CPU:public CardUser
 {
-private:
-	int total;
 public:
-	//コンストラクタ
+	//�R���X�g���N�^
 	CPU();
-	//カードを追加
-	void AddCard(int card);
-	//合計点を取得する
-	int GetTotal();
-	//現在の状態を表示
-	void ShowStatus();
 
 };
 

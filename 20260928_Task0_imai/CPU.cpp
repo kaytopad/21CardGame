@@ -6,19 +6,3 @@ CPU::CPU()
 {
 	total = 0;
 }
-
-void CPU::AddCard(int card)
-{
-	total += card;
-}
-
-int CPU::GetTotal()
-{
-	return total;
-}
-
-void CPU::ShowStatus()
-{
-	cout << "CPUの合計:" << total << endl;
-
-}

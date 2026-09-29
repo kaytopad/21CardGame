@@ -201,6 +201,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CardManager.h" />
+    <ClInclude Include="CardUser.h" />
     <ClInclude Include="Config.h" />
     <ClInclude Include="CPU.h" />
     <ClInclude Include="Game.h" />
@@ -209,6 +210,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CardManager.cpp" />
+    <ClCompile Include="CardUser.cpp" />
     <ClCompile Include="CPU.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.cpp" />
